@@ -1,0 +1,13 @@
+CREATE TABLE users(
+    username varchar(50),
+    password varchar(50),
+    PRIMARY KEY (username)
+);
+
+CREATE TABLE profile (
+    username VARCHAR(255) NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    age INT,
+    occupation VARCHAR(255),
+    FOREIGN KEY (username) REFERENCES users(username)
+);
